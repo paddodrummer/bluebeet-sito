@@ -9,7 +9,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"BlueBeet Studio","url":"https://bluebeet.it","image":"https://bluebeet.it/foto/regia.jpg","telephone":"+393335245112","email":"bluebeetstudio@gmail.com","foundingDate":"2009","vatID":"IT02329430355","address":{"@type":"PostalAddress","streetAddress":"Via Giovanni Crocioni 4/a","postalCode":"42122","addressLocality":"Reggio Emilia","addressRegion":"RE","addressCountry":"IT"},"sameAs":["https://www.instagram.com/bluebeetstudio/","https://www.facebook.com/BlueBeetStudio"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"BlueBeet Studio","url":"https://bluebeet.it","image":"https://bluebeet.it/foto/studio.jpg","telephone":"+393335245112","email":"bluebeetstudio@gmail.com","foundingDate":"2009","vatID":"IT02329430355","address":{"@type":"PostalAddress","streetAddress":"Via Giovanni Crocioni 4/a","postalCode":"42122","addressLocality":"Reggio Emilia","addressRegion":"RE","addressCountry":"IT"},"sameAs":["https://www.instagram.com/bluebeetstudio/","https://www.facebook.com/BlueBeetStudio"]}
 </script>
 <style>
 @font-face{font-family:Hanken;src:url(hanken-grotesk.woff2) format("woff2");font-weight:100 900;font-display:swap}
@@ -24,7 +24,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .hero{position:relative;overflow:hidden;height:calc(100svh - 10.5rem - var(--bar));min-height:24rem;background:var(--black)}
-.hero img{position:absolute;inset:0;object-position:50% 35%}
+.hero img{position:absolute;inset:0;object-position:50% 30%}
 .top{position:relative;padding:calc(1.25rem + env(safe-area-inset-top)) 1rem 3rem;text-align:center;background:linear-gradient(#060809f0 55%,#06080900)}
 .brand{display:block;font-size:.8125rem;font-weight:600;letter-spacing:.34em;margin-right:-.34em}
 .brand b{display:block;font-size:clamp(1.375rem,6vw,1.75rem);font-weight:400;letter-spacing:.28em;margin-right:-.28em;line-height:1.3}
@@ -54,6 +54,18 @@ h1{font-size:clamp(1.5rem,6.2vw,2.75rem);line-height:1.15;font-weight:700;letter
 @media (min-width:48rem){.wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 section.block{padding-block:4rem}
+.media{display:grid;gap:2rem 1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(22rem,100%),1fr))}
+.card h3{font-size:clamp(1.375rem,5vw,1.75rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.card p{color:var(--dim);margin-block:.25rem .75rem}
+.play{display:flex;align-items:center;justify-content:center;gap:.75rem;width:100%;background:#12181c;font-weight:700;border-radius:2px}
+.play:hover{background:#1b2429}
+.play svg{width:3rem;height:3rem;flex:none;fill:var(--blue)}
+.play.video,.card iframe.video{aspect-ratio:16/9}
+.play.audio,.card iframe.audio{height:22rem}
+.card iframe{display:block;width:100%;border:0;border-radius:2px}
+.insta{display:block;margin-top:2rem;padding-block:1.25rem;border-block:1px solid var(--line);font-size:clamp(1.375rem,6vw,2.75rem);line-height:1.15;font-weight:700;letter-spacing:-.015em}
+.insta:hover{color:var(--blue)}
+.note{margin-top:1rem;font-size:.875rem;color:var(--dim)}
 .services{list-style:none;padding:0}
 .services li{padding-block:1rem;border-top:1px solid var(--line)}
 .services b{display:block;font-size:clamp(1.75rem,7.4vw,3.5rem);line-height:1.08;font-weight:700;letter-spacing:-.02em}
@@ -89,15 +101,16 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   .bar a{min-height:var(--bar);display:block;text-align:center;font-weight:700;padding:1rem 1rem calc(1rem + env(safe-area-inset-bottom))}
   .bar a:first-child{background:var(--white);color:var(--ink)}
 }
+@media (max-width:47.99rem){nav.links .solo-desktop{display:none}}
 </style>
 </head>
 <body>
 <header class="hero">
-  <img src="foto/regia.jpg" width="1600" height="1247" alt="La regia di BlueBeet Studio: monitor, schermi e diffusori" fetchpriority="high">
+  <img src="foto/studio.jpg" width="1410" height="2000" alt="In regia a BlueBeet Studio, tra luci rosse e azzurre, davanti a monitor e diffusori" fetchpriority="high">
   <div class="top">
     <a class="brand" href="#" aria-label="BlueBeet Studio, inizio pagina"><b>BLUEBEET</b>STUDIO</a>
     <nav class="links" aria-label="Sezioni">
-      <a href="#clienti">Clienti</a><a href="#servizi">Servizi</a><a href="#attrezzatura">Attrezzatura</a><a href="#chi-siamo">Chi siamo</a><a href="#contatti">Contatti</a>
+      <a href="#clienti">Clienti</a><a href="#media">Media</a><a href="#servizi">Servizi</a><a href="#attrezzatura">Attrezzatura</a><a href="#chi-siamo">Chi siamo</a><a class="solo-desktop" href="#contatti">Contatti</a>
     </nav>
   </div>
 </header>
@@ -105,6 +118,7 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
 <main>
 <div class="claim"><div class="wrap"><h1>Registrazione, mix e mastering a Reggio Emilia, dal&nbsp;2009.</h1></div></div>
 
+<!-- SEZIONE ABBIAMO LAVORATO CON: un nome per ogni <li>...</li> -->
 <section class="names wrap" aria-labelledby="con">
   <h2 class="eyebrow" id="con">Abbiamo lavorato con</h2>
   <ul>
@@ -112,6 +126,7 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   </ul>
 </section>
 
+<!-- SEZIONE CLIENTI: ogni riga è una foto con il nome dell'artista e il suo link. -->
 <section id="clienti" aria-labelledby="cli">
   <h2 class="band" id="cli">I nostri clienti</h2>
   <ul class="wall">
@@ -126,6 +141,31 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   </ul>
 </section>
 
+<!-- SEZIONE MEDIA: per cambiare un contenuto, modifica href e data-embed del link. -->
+<section id="media" class="block"><div class="wrap">
+  <h2 class="eyebrow">Media</h2>
+  <div class="media">
+    <article class="card">
+      <h3>Paolo Simoni</h3>
+      <p>Ascolta su Spotify</p>
+      <!-- PLAYLIST: per una playlist usa open.spotify.com/playlist/ID e open.spotify.com/embed/playlist/ID -->
+      <a class="play audio" href="https://open.spotify.com/artist/2nwRpGJCa9TPU4bJxnXHWw" data-embed="https://open.spotify.com/embed/artist/2nwRpGJCa9TPU4bJxnXHWw?autoplay=1" data-kind="audio" data-title="Paolo Simoni su Spotify" rel="noopener">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Riproduci
+      </a>
+    </article>
+    <article class="card">
+      <h3>Rockin’1000, Learn to Fly</h3>
+      <p>Mix e mastering</p>
+      <a class="play video" href="https://www.youtube.com/watch?v=JozAmXo2bDE" data-embed="https://www.youtube-nocookie.com/embed/JozAmXo2bDE?autoplay=1" data-kind="video" data-title="Rockin’1000, Learn to Fly, video su YouTube" rel="noopener">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il video
+      </a>
+    </article>
+  </div>
+  <a class="insta" href="https://www.instagram.com/bluebeetstudio/" rel="noopener">I nostri lavori su Instagram: @bluebeetstudio</a>
+  <p class="note">Spotify e YouTube si caricano solo quando premi play.</p>
+</div></section>
+
+<!-- SEZIONE SERVIZI -->
 <section id="servizi" class="block"><div class="wrap">
   <h2 class="eyebrow">Servizi</h2>
   <ul class="services">
@@ -141,6 +181,7 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   <img src="foto/console.jpg" alt="La console e gli schermi della regia" loading="lazy" width="1000" height="750">
 </div>
 
+<!-- SEZIONE ATTREZZATURA -->
 <section id="attrezzatura" class="block"><div class="wrap">
   <h2 class="eyebrow">Attrezzatura</h2>
   <div class="gear">
@@ -150,6 +191,7 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   </div>
 </div></section>
 
+<!-- SEZIONE CHI SIAMO -->
 <section id="chi-siamo" class="block about"><div class="wrap">
   <h2 class="eyebrow">Chi siamo</h2>
   <div class="people">
@@ -168,6 +210,7 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   </div>
 </div></section>
 
+<!-- SEZIONE CONTATTI: se cambi telefono o email, aggiornali anche in fondo alla pagina (Chiama, Scrivi) e in alto nel blocco application/ld+json. -->
 <section id="contatti" class="contact"><div class="wrap">
   <h2 class="eyebrow">Contatti</h2>
   <a class="c" href="tel:+393335245112">333 524 5112</a>
@@ -186,5 +229,17 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   <a href="tel:+393335245112">Chiama</a>
   <a href="mailto:bluebeetstudio@gmail.com">Scrivi</a>
 </nav>
+<script>
+// Il lettore si carica solo al tocco: niente contenuti esterni prima di allora.
+document.querySelectorAll('.play').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var f=document.createElement('iframe');
+    f.src=a.dataset.embed;f.title=a.dataset.title;f.className=a.dataset.kind;
+    f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';f.allowFullscreen=true;
+    a.replaceWith(f);
+  });
+});
+</script>
 </body>
 </html>
