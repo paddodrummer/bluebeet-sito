@@ -62,7 +62,11 @@ section.block{padding-block:4rem}
 .play svg{width:3rem;height:3rem;flex:none;fill:var(--blue)}
 .play.video,.card iframe.video{aspect-ratio:16/9}
 .play.audio,.card iframe.audio{height:22rem}
-.play.reel{height:22rem}
+.play.reel{position:relative;overflow:hidden;aspect-ratio:4/3;text-shadow:0 1px 8px #000}
+.play.reel img{position:absolute;inset:0;transition:transform .4s}
+.play.reel:hover img{transform:scale(1.03)}
+.play.reel::before{content:"";position:absolute;inset:0;z-index:1;background:#04141c40}
+.play.reel svg,.play.reel span{position:relative;z-index:2}
 .card iframe.reel{height:32rem;max-width:30rem;background:#12181c}
 @media (min-width:48rem){.card iframe.reel{height:36rem}}
 .card iframe{display:block;width:100%;border:0;border-radius:2px}
@@ -144,43 +148,30 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
   </ul>
 </section>
 
-<!-- SEZIONE MEDIA: per cambiare un contenuto, modifica href e data-embed del link. -->
+<!-- SEZIONE MEDIA: per cambiare un contenuto, modifica href, data-embed e la foto di anteprima (img). -->
 <section id="media" class="block"><div class="wrap">
   <h2 class="eyebrow">Media</h2>
   <div class="media">
-    <article class="card">
-      <h3>Paolo Simoni</h3>
-      <p>Ascolta su Spotify</p>
-      <!-- PLAYLIST: per una playlist usa open.spotify.com/playlist/ID e open.spotify.com/embed/playlist/ID -->
-      <a class="play audio" href="https://open.spotify.com/artist/2nwRpGJCa9TPU4bJxnXHWw" data-embed="https://open.spotify.com/embed/artist/2nwRpGJCa9TPU4bJxnXHWw?autoplay=1" data-kind="audio" data-title="Paolo Simoni su Spotify" rel="noopener">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Riproduci
-      </a>
-    </article>
-    <article class="card">
-      <h3>Rockin’1000, Learn to Fly</h3>
-      <p>Mix e mastering</p>
-      <a class="play video" href="https://www.youtube.com/watch?v=JozAmXo2bDE" data-embed="https://www.youtube-nocookie.com/embed/JozAmXo2bDE?autoplay=1" data-kind="video" data-title="Rockin’1000, Learn to Fly, video su YouTube" rel="noopener">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il video
-      </a>
-    </article>
     <!-- REEL INSTAGRAM: per un altro reel usa instagram.com/reel/ID/ in href e instagram.com/reel/ID/embed/ in data-embed -->
     <article class="card">
       <h3>Ligabue, Arena di Verona</h3>
       <p>Reel di @ligabue_official</p>
       <a class="play reel" href="https://www.instagram.com/reel/Ddqu6HfIUhz/" data-embed="https://www.instagram.com/reel/Ddqu6HfIUhz/embed/" data-kind="reel" data-title="Ligabue all’Arena di Verona, reel su Instagram" rel="noopener">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il reel
+        <img src="foto/reel-arena.jpg" alt="" loading="lazy" width="720" height="540">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg><span>Guarda il reel</span>
       </a>
     </article>
     <article class="card">
       <h3>Ligabue, data zero del tour</h3>
       <p>Reel di @ligabue_official</p>
       <a class="play reel" href="https://www.instagram.com/reel/DdTjNZ_IqR-/" data-embed="https://www.instagram.com/reel/DdTjNZ_IqR-/embed/" data-kind="reel" data-title="Ligabue, data zero del tour, reel su Instagram" rel="noopener">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il reel
+        <img src="foto/reel-data-zero.jpg" alt="" loading="lazy" width="640" height="480">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg><span>Guarda il reel</span>
       </a>
     </article>
   </div>
   <a class="insta" href="https://www.instagram.com/bluebeetstudio/" rel="noopener">I nostri lavori su Instagram: @bluebeetstudio</a>
-  <p class="note">Spotify, YouTube e Instagram si caricano solo quando premi play.</p>
+  <p class="note">I video di Instagram si caricano solo quando premi play.</p>
 </div></section>
 
 <!-- SEZIONE SERVIZI -->
