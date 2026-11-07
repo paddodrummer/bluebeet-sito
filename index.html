@@ -36,7 +36,7 @@ nav.links a:hover{color:var(--blue)}
 .claim .wrap{width:100%}
 h1{font-size:clamp(1.5rem,6.2vw,2.75rem);line-height:1.15;font-weight:700;letter-spacing:-.015em;text-wrap:balance}
 
-.names{padding-block:1rem 4rem}
+.names{padding-block:.5rem 3rem}
 .eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:1.5rem}
 .names .eyebrow{text-align:center;color:var(--dim)}
 .names ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.5rem 1.5rem}
@@ -53,7 +53,7 @@ h1{font-size:clamp(1.5rem,6.2vw,2.75rem);line-height:1.15;font-weight:700;letter
 @media (prefers-reduced-motion:reduce){.wall img{transition:none}}
 @media (min-width:48rem){.wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
-section.block{padding-block:4rem}
+section.block{padding-block:clamp(2.5rem,6vw,3.5rem)}
 .media{display:grid;gap:2rem 1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(26rem,100%),1fr))}
 .card h3{font-size:clamp(1.375rem,5vw,1.75rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
 .card p{color:var(--dim);margin-block:.25rem .75rem}
@@ -70,15 +70,16 @@ section.block{padding-block:4rem}
 .card iframe.reel{height:32rem;max-width:30rem;background:#12181c}
 @media (min-width:48rem){.card iframe.reel{height:36rem}}
 .card iframe{display:block;width:100%;border:0;border-radius:2px}
-.insta{display:block;margin-top:2rem;padding-block:1.25rem;border-block:1px solid var(--line);font-size:clamp(1.375rem,6vw,2.75rem);line-height:1.15;font-weight:700;letter-spacing:-.015em}
+.insta{display:block;margin-top:1.5rem;padding-block:1rem;border-block:1px solid var(--line);font-size:clamp(1.25rem,4.5vw,2rem);line-height:1.15;font-weight:700;letter-spacing:-.015em}
 .insta:hover{color:var(--blue)}
-.note{margin-top:1rem;font-size:.875rem;color:var(--dim)}
-.services{list-style:none;padding:0}
-.services li{padding-block:1rem;border-top:1px solid var(--line)}
-.services b{display:block;font-size:clamp(1.75rem,7.4vw,3.5rem);line-height:1.08;font-weight:700;letter-spacing:-.02em}
-.services span{display:block;margin-top:.25rem;color:var(--dim)}
+.services{list-style:none;padding:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr))}
+.services li{position:relative;padding:1.5rem 1.25rem 1.375rem;background:#0e1418;border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:4px}
+.services i{display:block;font-style:normal;font-size:.8125rem;font-weight:600;letter-spacing:.12em;color:var(--blue)}
+.services b{display:block;margin-top:.5rem;font-size:clamp(1.25rem,4.4vw,1.5rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.services span{display:block;margin-top:.5rem;color:var(--dim);font-size:.9375rem}
 
-.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));aspect-ratio:2/1.1}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:.75rem}
+.duo img{height:clamp(8rem,24vw,15rem);border-radius:4px}
 .gear{display:grid;gap:2rem}
 .gear h3{font-size:clamp(1.375rem,5vw,1.75rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
 .gear p{color:var(--dim)}
@@ -92,12 +93,24 @@ section.block{padding-block:4rem}
 .person .credits{margin-top:.75rem;color:var(--dim)}
 @media (min-width:48rem){.people{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-.contact{background:var(--blue);color:var(--ink);padding-block:4rem}
-.contact .eyebrow{color:var(--ink);margin-bottom:1.25rem}
-.contact a.c{display:block;width:fit-content;max-width:100%;font-size:clamp(1.875rem,9.4vw,5.5rem);line-height:1.1;font-weight:800;letter-spacing:-.025em;padding-block:.375rem}
-.contact a.mail{font-size:clamp(1.25rem,6.6vw,4rem);letter-spacing:-.02em;padding-block:.75rem}
-.contact .more{display:flex;flex-wrap:wrap;gap:0 1.5rem;margin-top:1rem}
-.contact .more a{padding-block:.625rem;text-decoration:underline;text-underline-offset:.2em}
+.contact{background:var(--blue);color:var(--ink);padding-block:clamp(2.5rem,6vw,3.5rem)}
+.contact .eyebrow{color:var(--ink);margin-bottom:1rem}
+.contact .grid{display:grid;gap:2rem}
+@media (min-width:48rem){.contact .grid{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:3rem;align-items:start}}
+.contact a.c{display:block;width:fit-content;max-width:100%;font-size:clamp(1.5rem,5vw,2.25rem);line-height:1.15;font-weight:800;letter-spacing:-.02em;padding-block:.25rem}
+.contact a.mail{font-size:clamp(1.125rem,3.6vw,1.5rem);font-weight:700;letter-spacing:-.01em}
+.contact .more{display:flex;flex-direction:column;align-items:flex-start;margin-top:.75rem}
+.contact .more a{padding-block:.375rem;text-decoration:underline;text-underline-offset:.2em}
+.form{display:grid;gap:.875rem;padding:1.25rem;background:#ffffff2e;border-radius:4px}
+.form .two{display:grid;gap:.875rem}
+@media (min-width:36rem){.form .two{grid-template-columns:1fr 1fr}}
+.form label{display:grid;gap:.25rem;font-size:.875rem;font-weight:600}
+.form input,.form textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:#f4f7f8;border:1px solid #04141c33;border-radius:3px;padding:.625rem .75rem}
+.form textarea{min-height:7rem;resize:vertical}
+.form input:focus,.form textarea:focus{outline:2px solid var(--ink);outline-offset:1px}
+.form button{justify-self:start;font:inherit;font-weight:700;color:var(--white);background:var(--ink);border:0;border-radius:3px;padding:.75rem 1.5rem;cursor:pointer}
+.form button:hover{background:#0b2a38}
+.form small{font-size:.8125rem}
 footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
 
 .bar{display:none}
@@ -171,24 +184,22 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
     </article>
   </div>
   <a class="insta" href="https://www.instagram.com/bluebeetstudio/" rel="noopener">I nostri lavori su Instagram: @bluebeetstudio</a>
-  <p class="note">I video di Instagram si caricano solo quando premi play.</p>
 </div></section>
 
 <!-- SEZIONE SERVIZI -->
 <section id="servizi" class="block"><div class="wrap">
   <h2 class="eyebrow">Servizi</h2>
   <ul class="services">
-    <li><b>Registrazione in studio</b></li>
-    <li><b>Mix</b></li>
-    <li><b>Mastering</b><span>Anche online: mandi il mix, ricevi il master.</span></li>
-    <li><b>Produzione artistica</b></li>
+    <li><i>01</i><b>Registrazione in studio</b><span>Voci, band e strumenti in sala di ripresa, con la regia Avid Carbon e Pro Tools.</span></li>
+    <li><i>02</i><b>Mix</b><span>Bilanciamo e rifiniamo le tue tracce, anche se le hai registrate altrove.</span></li>
+    <li><i>03</i><b>Mastering</b><span>Anche online: mandi il mix, ricevi il master.</span></li>
+    <li><i>04</i><b>Produzione artistica</b><span>Arrangiamenti e scelte di suono, dal provino al brano finito.</span></li>
   </ul>
+  <div class="duo">
+    <img src="foto/microfono.jpg" alt="Microfono a condensatore in sala di ripresa" loading="lazy" width="1000" height="750">
+    <img src="foto/console.jpg" alt="La console e gli schermi della regia" loading="lazy" width="1000" height="750">
+  </div>
 </div></section>
-
-<div class="duo">
-  <img src="foto/microfono.jpg" alt="Microfono a condensatore in sala di ripresa" loading="lazy" width="1000" height="750">
-  <img src="foto/console.jpg" alt="La console e gli schermi della regia" loading="lazy" width="1000" height="750">
-</div>
 
 <!-- SEZIONE ATTREZZATURA -->
 <section id="attrezzatura" class="block"><div class="wrap">
@@ -222,12 +233,27 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
 <!-- SEZIONE CONTATTI: se cambi telefono o email, aggiornali anche in fondo alla pagina (Chiama, Scrivi) e in alto nel blocco application/ld+json. -->
 <section id="contatti" class="contact"><div class="wrap">
   <h2 class="eyebrow">Contatti</h2>
-  <a class="c" href="tel:+393335245112">333 524 5112</a>
-  <a class="c mail" href="mailto:bluebeetstudio@gmail.com">bluebeetstudio@gmail.com</a>
-  <div class="more">
-    <a href="https://maps.google.com/?cid=3897530555156069105" rel="noopener">Via Giovanni Crocioni 4/a, 42122 Reggio Emilia</a>
-    <a href="https://www.instagram.com/bluebeetstudio/" rel="noopener">Instagram</a>
-    <a href="https://www.facebook.com/BlueBeetStudio" rel="noopener">Facebook</a>
+  <div class="grid">
+    <div>
+      <a class="c" href="tel:+393335245112">333 524 5112</a>
+      <a class="c mail" href="mailto:bluebeetstudio@gmail.com">bluebeetstudio@gmail.com</a>
+      <div class="more">
+        <a href="https://maps.google.com/?cid=3897530555156069105" rel="noopener">Via Giovanni Crocioni 4/a, 42122 Reggio Emilia</a>
+        <a href="https://www.instagram.com/bluebeetstudio/" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/BlueBeetStudio" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <!-- MODULO: alla pressione di Invia apre il programma di posta con il messaggio già scritto per bluebeetstudio@gmail.com -->
+    <form class="form" id="modulo" action="mailto:bluebeetstudio@gmail.com" method="post" enctype="text/plain">
+      <div class="two">
+        <label>Nome<input name="nome" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label>Telefono (facoltativo)<input name="telefono" type="tel" autocomplete="tel"></label>
+      <label>Messaggio<textarea name="messaggio" required placeholder="Cosa vorresti registrare, mixare o masterizzare?"></textarea></label>
+      <button type="submit">Invia</button>
+      <small>Premendo Invia si apre il tuo programma di posta con il messaggio già pronto.</small>
+    </form>
   </div>
 </div></section>
 </main>
@@ -248,6 +274,13 @@ document.querySelectorAll('.play').forEach(function(a){
     f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';f.allowFullscreen=true;
     a.replaceWith(f);
   });
+});
+// Il modulo prepara una email con i dati inseriti.
+document.getElementById('modulo').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(this),t=d.get('telefono');
+  var body=d.get('messaggio')+'\n\n'+d.get('nome')+'\n'+d.get('email')+(t?'\n'+t:'');
+  location.href='mailto:bluebeetstudio@gmail.com?subject='+encodeURIComponent('Richiesta dal sito: '+d.get('nome'))+'&body='+encodeURIComponent(body);
 });
 </script>
 </body>
