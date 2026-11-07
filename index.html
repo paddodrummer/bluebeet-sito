@@ -54,7 +54,7 @@ h1{font-size:clamp(1.5rem,6.2vw,2.75rem);line-height:1.15;font-weight:700;letter
 @media (min-width:48rem){.wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 section.block{padding-block:4rem}
-.media{display:grid;gap:2rem 1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(22rem,100%),1fr))}
+.media{display:grid;gap:2rem 1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(26rem,100%),1fr))}
 .card h3{font-size:clamp(1.375rem,5vw,1.75rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
 .card p{color:var(--dim);margin-block:.25rem .75rem}
 .play{display:flex;align-items:center;justify-content:center;gap:.75rem;width:100%;background:#12181c;font-weight:700;border-radius:2px}
@@ -62,6 +62,9 @@ section.block{padding-block:4rem}
 .play svg{width:3rem;height:3rem;flex:none;fill:var(--blue)}
 .play.video,.card iframe.video{aspect-ratio:16/9}
 .play.audio,.card iframe.audio{height:22rem}
+.play.reel{height:22rem}
+.card iframe.reel{height:32rem;max-width:30rem;background:#12181c}
+@media (min-width:48rem){.card iframe.reel{height:36rem}}
 .card iframe{display:block;width:100%;border:0;border-radius:2px}
 .insta{display:block;margin-top:2rem;padding-block:1.25rem;border-block:1px solid var(--line);font-size:clamp(1.375rem,6vw,2.75rem);line-height:1.15;font-weight:700;letter-spacing:-.015em}
 .insta:hover{color:var(--blue)}
@@ -160,9 +163,24 @@ footer{padding-block:1.5rem;color:var(--dim);font-size:.875rem}
         <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il video
       </a>
     </article>
+    <!-- REEL INSTAGRAM: per un altro reel usa instagram.com/reel/ID/ in href e instagram.com/reel/ID/embed/ in data-embed -->
+    <article class="card">
+      <h3>Ligabue, Arena di Verona</h3>
+      <p>Reel di @ligabue_official</p>
+      <a class="play reel" href="https://www.instagram.com/reel/Ddqu6HfIUhz/" data-embed="https://www.instagram.com/reel/Ddqu6HfIUhz/embed/" data-kind="reel" data-title="Ligabue all’Arena di Verona, reel su Instagram" rel="noopener">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il reel
+      </a>
+    </article>
+    <article class="card">
+      <h3>Ligabue, data zero del tour</h3>
+      <p>Reel di @ligabue_official</p>
+      <a class="play reel" href="https://www.instagram.com/reel/DdTjNZ_IqR-/" data-embed="https://www.instagram.com/reel/DdTjNZ_IqR-/embed/" data-kind="reel" data-title="Ligabue, data zero del tour, reel su Instagram" rel="noopener">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M19 14l16 10-16 10z" fill="#04141c"/></svg>Guarda il reel
+      </a>
+    </article>
   </div>
   <a class="insta" href="https://www.instagram.com/bluebeetstudio/" rel="noopener">I nostri lavori su Instagram: @bluebeetstudio</a>
-  <p class="note">Spotify e YouTube si caricano solo quando premi play.</p>
+  <p class="note">Spotify, YouTube e Instagram si caricano solo quando premi play.</p>
 </div></section>
 
 <!-- SEZIONE SERVIZI -->
